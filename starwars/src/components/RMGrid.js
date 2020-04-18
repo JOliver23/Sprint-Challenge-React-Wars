@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
+import RMCard from './RMCard'
 
 function RMGrid() {
     const [rmData, setRMData] = useState([]);
@@ -11,7 +12,13 @@ function RMGrid() {
     }, []);
 
     return (
-        <div />
+        <div className="container">
+            <div className="data-holder">
+                {rmData.map((charObj) => {
+                    return <RMCard key={charObj.id} character={charObj} />
+                })}
+            </div>
+        </div>
     )
 };
 
