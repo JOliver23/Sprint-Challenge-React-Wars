@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { CharCard, CharImg } from './StyleLibrary';
+import { CharCard, CharImg, CardText } from './StyleLibrary';
 
 const RMCard = props => {
     const [character, setCharacter] = useState(props.character)
@@ -8,12 +8,11 @@ const RMCard = props => {
         <CharCard>
             <h2>{character.name}</h2>
             <CharImg src={character.image} alt={character.name} />
-            <p>{character.status}</p>
+            <CardText type="info">{character.status}</CardText>
             <p>Species: {character.species}</p>
             <p>Gender: {character.gender} </p>
-            <div>
-                <p>Location: {character.location.name}</p>
-            </div>
+            <p>Location: {character.location.name}</p>
+            
         </CharCard>
     )
 }
