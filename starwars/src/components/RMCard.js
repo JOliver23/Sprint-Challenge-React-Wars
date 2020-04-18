@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { CharCard, CharImg, CardText } from './StyleLibrary';
+import { CharCard, CharImg, CardText, NameTag } from './StyleLibrary';
 
 const RMCard = props => {
     const [character, setCharacter] = useState(props.character)
     
     return (
         <CharCard>
-            <h2>{character.name}</h2>
+            <NameTag>{character.name}</NameTag>
             <CharImg src={character.image} alt={character.name} />
-            <CardText type="info">{character.status}</CardText>
-            <p>Species: {character.species}</p>
-            <p>Gender: {character.gender} </p>
-            <p>Location: {character.location.name}</p>
+            <CardText type="info">Squanch: {character.status}</CardText>
+            <CardText type="other">Origin: {character.origin.name}</CardText>
+            <CardText type="info">Gender: {character.gender} </CardText>
+            <CardText type="other">Location: {character.location.name}</CardText>
             
         </CharCard>
     )
