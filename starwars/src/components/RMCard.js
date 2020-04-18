@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { CharCard, CharImg, CardText, NameTag } from './StyleLibrary';
 
 const RMCard = props => {
-    const [character, setCharacter] = useState(props.character)
+    const [character] = useState(props.character)
     
     return (
         <CharCard>
