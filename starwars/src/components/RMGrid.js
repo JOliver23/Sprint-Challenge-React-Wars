@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
-import RMCard from './RMCard'
+import RMCard from './RMCard';
 
 function RMGrid() {
     const [rmData, setRMData] = useState([]);
